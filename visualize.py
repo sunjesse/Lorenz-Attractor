@@ -12,7 +12,7 @@ def d_dt(v, args):
 
 def update(v, args):
     dx, dy, dz = d_dt(v, args)
-    v += 0.01*np.array([dx, dy, dz])
+    v += args.dt*np.array([dx, dy, dz])
     return v
 
 def run(args):
